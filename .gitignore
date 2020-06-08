@@ -2,3 +2,4 @@
 /runtime
 /*.log
 /vendor
+/.phpstorm.meta.php

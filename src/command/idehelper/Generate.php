@@ -1,7 +1,7 @@
 <?php
 
 
-namespace command;
+namespace command\idehelper;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -10,12 +10,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use ank\App;
 
-class IDEHelper extends Command
+class Generate extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('ide-helper')
+            ->setName('ide-helper:generate')
             // the short description shown while running "php bin/console list"
             ->setDescription('生成代码提示帮助文件')
             //            ->addOption(
@@ -71,10 +71,12 @@ class IDEHelper extends Command
         $app     = App::getInstance();
         $appPath = $app->getAppPath();
         $dir     = $appPath . '/.phpstorm.meta.php';
-        $str     = file_get_contents(__DIR__ . '/../tpl/framework.meta.php');
+        $str     = file_get_contents(__DIR__ . '/../../tpl/framework.meta.php');
         if (!file_exists($dir)) {
             mkdir($dir, 777, true);
         }
         file_put_contents($dir . '/framework.meta.php', $str);
+        $output->writeln('代码提示文件生成成功: ' . $dir . '/framework.meta.php');
+        return 0;
     }
 }
