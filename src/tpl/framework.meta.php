@@ -1,7 +1,7 @@
 <?php
 
 namespace PHPSTORM_META {
-    override(\ank\App::get(0),         // method signature //argument number is ALWAYS 0 now.
+    override(\ank\facade\App::get(0),         // method signature //argument number is ALWAYS 0 now.
         map([                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        //map of argument value -> return type
             //            "log"        => \ank\driver\log\Log::class,
             ""           => "@",
@@ -55,7 +55,7 @@ namespace PHPSTORM_META {
             //            \EXAMPLE_B                 => \ExampleB::class,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          // and global constants too
             //non mapped value, e.g. $getByClassNameConst case above will be returned automatically
         ]));
-    override(App::make(0),         // method signature //argument number is ALWAYS 0 now.
+    override(\ank\facade\App::make(0),         // method signature //argument number is ALWAYS 0 now.
         map([                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        //map of argument value -> return type
             //            "log"        => \ank\driver\log\Log::class,
             ""           => "@",
