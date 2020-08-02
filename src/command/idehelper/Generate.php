@@ -68,8 +68,9 @@ class Generate extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $app     = App::getInstance();
-        $appPath = $app->getAppPath();
+        //$app     = App::getInstance();
+        //$appPath = $app->getAppPath();
+        $appPath = getcwd();
         $dir     = $appPath . '/.phpstorm.meta.php';
         $str     = file_get_contents(__DIR__ . '/../../tpl/framework.meta.php');
         if (!file_exists($dir)) {
