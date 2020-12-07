@@ -1,34 +1,31 @@
 {
-    "name": "ank/ide-helper",
-    "description": "ide helper",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "authors": [
+  "name": "ank/ide-helper",
+  "description": "ide helper",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
     {
-        "name": "mokuyu",
-        "email": "735579768@qq.com"
-    }],
-    "autoload":
+      "name": "mokuyu",
+      "email": "735579768@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\command\\": "src/command"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
+  },
+  "require": {
+    "ank/framework": "^2.0"
+  },
+  "repositories": [
     {
-        "psr-4":
-        {
-            "command\\": "src/command"
-        }
-    },
-    "extra":
-    {
-        "branch-alias":
-        {
-            "dev-master": "1.0.x-dev"
-        }
-    },
-    "require":
-    {
-        "ank/framework": "^1.0"
-    },
-    "repositories": [
-    {
-        "type": "composer",
-        "url": "http://packagist.zkeli.com/"
-    }]
+      "type": "composer",
+      "url": "http://packagist.zkeli.com/"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace command\idehelper;
+namespace app\command\idehelper;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
